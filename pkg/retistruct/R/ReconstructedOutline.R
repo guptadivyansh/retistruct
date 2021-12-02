@@ -726,7 +726,7 @@ ReconstructedOutline <- R6Class("ReconstructedOutline",
       oo <- is.na(Pb$idx)           # Points outwith outline
 #       write.csv(oo, "Z:\\outofbounds.csv")
       print(Pb$idx)
-      write.csv(Pb$idx, "Z:\\outofbounds.csv")
+      write.csv(Pb$idx, paste("Z:\\outofbounds", format(Sys.time(), "%H_%M_%S"), ".csv"))
       if (any(oo)) {
         warning(paste(sum(oo), "points outwith the outline will be ignored"))
       }
